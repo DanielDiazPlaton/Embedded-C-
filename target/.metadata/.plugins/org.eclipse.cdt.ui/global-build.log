@@ -1,0 +1,21 @@
+16:52:34 **** Incremental Build of configuration Debug for project 000TestProject ****
+make -j8 all 
+arm-none-eabi-g++ "../Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DNUCLEO_L432KC -DSTM32L4 -DSTM32 -DSTM32L432KCUx -c -I../Inc -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-g++ -o "000TestProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Documentos\Cplus\STMcube-Embedded-C++\target\000TestProject\STM32L432KCUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="000TestProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: 000TestProject.elf
+ 
+arm-none-eabi-size   000TestProject.elf 
+arm-none-eabi-objdump -h -S  000TestProject.elf  > "000TestProject.list"
+   text	   data	    bss	    dec	    hex	filename
+    656	      8	   1568	   2232	    8b8	000TestProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: 000TestProject.list
+ 
+22:10:18 **** Incremental Build of configuration Debug for project 000TestProject ****
+make -j8 all 
+arm-none-eabi-size   000TestProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+    656	      8	   1568	   2232	    8b8	000TestProject.elf
+Finished building: default.size.stdout
+ 
